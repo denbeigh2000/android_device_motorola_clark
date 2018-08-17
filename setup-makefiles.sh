@@ -27,7 +27,7 @@ write_headers
 # The blobs
 write_makefiles "$MY_DIR"/proprietary-files.txt
 
-printf '\n%s\n' "\$(call inherit-product, vendor/qcom/binaries/bluetooth/bluetooth-vendor.mk)" >> "$PRODUCTMK"
+printf '\n%s\n' "\$(call inherit-product, vendor/motorola/kinzie/qcom/binaries/bluetooth/bluetooth-vendor.mk)" >> "$PRODUCTMK"
 
 # We are done!
 write_footers
