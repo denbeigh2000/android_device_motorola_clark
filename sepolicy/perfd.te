@@ -1,4 +1,4 @@
-dontaudit perfd self:capability { fsetid sys_ptrace };
+dontaudit perfd self:capability fsetid;
 
 type_transition perfd mpctl_data_file:sock_file mpctl_socket;
 
@@ -12,3 +12,5 @@ allow perfd sysfs_performance:file rw_file_perms;
 allow perfd sysfs_power_management:file w_file_perms;
 allow perfd sysfs_thermal:dir search;
 allow perfd sysfs_thermal:file rw_file_perms;
+allow perfd system_data_file:dir { write add_name create remove_name};
+allow perfd system_data_file:sock_file { create};

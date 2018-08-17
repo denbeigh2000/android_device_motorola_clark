@@ -27,7 +27,6 @@ persist.audio.fluence.voicerec=false
 ro.config.vc_call_vol_steps=8
 ro.qc.sdk.audio.ssr=false
 ro.qc.sdk.audio.fluencetype=fluence
-ro.audio.monitorRotation=true
 ro.audio.flinger_standbytime_ms=300
 
 # Bluetooth
@@ -63,6 +62,9 @@ ro.fm.transmitter=false
 
 # FRP
 ro.frp.pst=/dev/block/platform/soc.0/f9824900.sdhci/by-name/frp
+
+# Google Assistant
+ro.opa.eligible_device=true
 
 # GPS
 persist.gps.qc_nlp_in_use=0
@@ -162,7 +164,7 @@ ro.qc.sdk.sensors.gestures=true
 persist.sys.ssr.restart_level=ALL_ENABLE
 
 # Storage
-ro.sys.sdcardfs=true
+# ro.sys.sdcardfs=true
 
 # Time
 persist.timed.enable=true
@@ -180,3 +182,17 @@ ro.usb.ptp_adb=0x2e84
 # Wifi Display
 persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
+
+#ADB
+ro.secure=0
+persist.service.adb.enable=1
+persist.service.debuggable=1
+ro.adb=1
+ro.debuggable=1
+persist.sys.usb.config=mtp,adb
+
+#Revert LCD
+ro.panel.mountflip=3
+
+# Dexopt
+ro.sys.fw.dex2oat_thread_count=4

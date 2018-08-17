@@ -124,7 +124,7 @@ etc/firmware/cpp_firmware_v1_6_0.fw
 etc/firmware/cpp_firmware_v1_8_0.fw
 etc/permissions/com.motorola.camera.xml
 etc/permissions/com.motorola.gallery.xml
-lib/hw/camera.msm8992.so:lib/hw/camera.vendor.msm8992.so
+lib/hw/camera.msm8994.so:lib/hw/camera.vendor.msm8994.so
 lib/libmot_lux_standardization.so
 lib/libadvalgcore.so
 lib/libAisAdapter.so
@@ -311,6 +311,8 @@ lib/libdmjavaplugin.so:priv-app/DMService/lib/arm/libdmjavaplugin.so
 # DRM
 # TZBSP
 bin/qseecomd
+etc/permissions/com.google.widevine.software.drm.xml
+framework/com.google.widevine.software.drm.jar
 lib/hw/keystore.qcom.so
 lib64/hw/keystore.qcom.so
 vendor/lib/libdrmfs.so
@@ -344,9 +346,9 @@ vendor/lib/libSSEPKCS11.so
 vendor/lib64/libSSEPKCS11.so
 vendor/lib/libtzdrmgenprov.so
 vendor/lib64/libtzdrmgenprov.so
-vendor/lib/libwvdrm_L3.so
+vendor/lib/libwvdrm_L1.so
 vendor/lib/libwvm.so
-vendor/lib/libWVStreamControlAPI_L3.so
+vendor/lib/libWVStreamControlAPI_L1.so
 vendor/lib/mediadrm/libwvdrmengine.so
 
 # Display tuning
@@ -442,58 +444,10 @@ vendor/lib64/libxtwifi_zpp_adaptor.so
 # Adreno GPU
 etc/firmware/leia_pfp_470.fw
 etc/firmware/leia_pm4_470.fw
-vendor/firmware/a420_pfp.fw
-vendor/firmware/a420_pm4.fw
-vendor/lib/egl/eglSubDriverAndroid.so
-vendor/lib/egl/libEGL_adreno.so
-vendor/lib/egl/libGLESv1_CM_adreno.so
-vendor/lib/egl/libGLESv2_adreno.so
-vendor/lib/egl/libQTapGLES.so
-vendor/lib/egl/libq3dtools_adreno.so
-vendor/lib/egl/libq3dtools_esx.so
-vendor/lib/hw/vulkan.msm8992.so
-vendor/lib/libC2D2.so
-vendor/lib/libCB.so
-vendor/lib/libEGL_adreno.so
+etc/firmware/a420_pfp.fw
+etc/firmware/a420_pm4.fw
 vendor/lib/libOpenCL.so
-vendor/lib/libRSDriver_adreno.so
-vendor/lib/libadreno_utils.so
-vendor/lib/libbccQTI.so
-vendor/lib/libc2d30-a3xx.so
-vendor/lib/libc2d30-a4xx.so
-vendor/lib/libgsl.so
-vendor/lib/libllvm-glnext.so
-vendor/lib/libllvm-qcom.so
-vendor/lib/libllvm-qgl.so
-vendor/lib/librs_adreno.so
-vendor/lib/librs_adreno_sha1.so
-vendor/lib/libscale.so
-vendor/lib/libuiblur.so
-vendor/lib64/egl/eglSubDriverAndroid.so
-vendor/lib64/egl/libEGL_adreno.so
-vendor/lib64/egl/libGLESv1_CM_adreno.so
-vendor/lib64/egl/libGLESv2_adreno.so
-vendor/lib64/egl/libQTapGLES.so
-vendor/lib64/egl/libq3dtools_adreno.so
-vendor/lib64/egl/libq3dtools_esx.so
-vendor/lib64/hw/vulkan.msm8992.so
-vendor/lib64/libC2D2.so
-vendor/lib64/libCB.so
-vendor/lib64/libEGL_adreno.so
 vendor/lib64/libOpenCL.so
-vendor/lib64/libRSDriver_adreno.so
-vendor/lib64/libadreno_utils.so
-vendor/lib64/libbccQTI.so
-vendor/lib64/libc2d30-a3xx.so
-vendor/lib64/libc2d30-a4xx.so
-vendor/lib64/libgsl.so
-vendor/lib64/libllvm-glnext.so
-vendor/lib64/libllvm-qcom.so
-vendor/lib64/libllvm-qgl.so
-vendor/lib64/librs_adreno.so
-vendor/lib64/librs_adreno_sha1.so
-vendor/lib64/libscale.so
-vendor/lib64/libuiblur.so
 
 # Media
 etc/firmware/dxhdcp2.b00
@@ -624,20 +578,20 @@ vendor/lib64/libxml.so
 vendor/lib64/libqcmaputils.so
 
 # Touchscreen firmware
-etc/firmware/synaptics-s2726-15052160-1d19d9-clark.tdat
-etc/firmware/synaptics-s3528-15071401-1e29b4-clark.tdat
-etc/firmware/synaptics-s3528ar-15071401-1e29b4-clark.tdat
+etc/firmware/synaptics-s3528-15070602-1def27-kinzie.tdat
+etc/firmware/synaptics-s3528ks-14102100-1a96a7-kinzie.tdat
+etc/firmware/synaptics-s3528ks2-15070602-1def27-kinzie.tdat
 
 # Sensors
 bin/motosh
 etc/firmware/sensorhubfw.bin
-lib/hw/sensors.msm8992.so
-lib64/hw/sensors.msm8992.so
+lib/hw/sensors.msm8994.so
+lib64/hw/sensors.msm8994.so
 vendor/lib/libsubsystem_control.so
 vendor/lib64/libsubsystem_control.so
 vendor/lib/libSubSystemShutdown.so
 vendor/lib64/libSubSystemShutdown.so
-lib64/hw/sensorhub.msm8992.so
+lib64/hw/sensorhub.msm8994.so
 vendor/lib/libsensor1.so
 vendor/lib64/libsensor1.so
 

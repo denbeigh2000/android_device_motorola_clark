@@ -15,13 +15,14 @@
 #
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-$(call inherit-product-if-exists, vendor/motorola/clark/clark-vendor.mk)
+$(call inherit-product-if-exists, vendor/motorola/kinzie/kinzie-vendor.mk)
 
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/aanc_tuning_mixer.txt:system/etc/aanc_tuning_mixer.txt \
     $(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
     $(LOCAL_PATH)/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
+    $(LOCAL_PATH)/audio/audio_platform_info_i2s.xml:system/etc/audio_platform_info_i2s.xml \
     $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf \
     $(LOCAL_PATH)/audio/media_codecs.xml:system/etc/media_codecs.xml \
     $(LOCAL_PATH)/audio/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
@@ -32,9 +33,9 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml
 
 PRODUCT_PACKAGES += \
-    audio_policy.msm8992 \
+    audio_policy.msm8994 \
     audio.a2dp.default \
-    audio.primary.msm8992 \
+    audio.primary.msm8994 \
     audio.r_submix.default \
     audio.usb.default \
     libaudio-resampler \
@@ -49,7 +50,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.msm8992 \
+    camera.msm8994 \
     libcamera \
     libqomx_core \
     libmm-qcamera \
@@ -78,10 +79,10 @@ PRODUCT_PACKAGES += \
     pp_calib_data_mipi_mot_cmd_inx_QHD_0_570_v0.xml
 
 PRODUCT_PACKAGES += \
-    hwcomposer.msm8992 \
-    gralloc.msm8992 \
-    copybit.msm8992 \
-    memtrack.msm8992 \
+    hwcomposer.msm8994 \
+    gralloc.msm8994 \
+    copybit.msm8994 \
+    memtrack.msm8994 \
     liboverlay \
     libqdutils \
     libqdMetaData
@@ -90,12 +91,27 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/releasetools/extract_firmware.sh:install/bin/extract_firmware.sh
 
+# Gello
+PRODUCT_PACKAGES += \
+    Gello
+
+# GPS
+#PRODUCT_PACKAGES += \
+#    gps.msm8994
+
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/configs/gps.conf:system/etc/gps.conf
+
 # GPS
 PRODUCT_PACKAGES += \
-    gps.msm8992
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/gps.conf:system/etc/gps.conf
+    gps.msm8994 \
+    flp.conf \
+    gps.conf \
+    izat.conf \
+    lowi.conf \
+    quipc.conf \
+    sap.conf \
+    xtwifi.conf
 
 # Init
 PRODUCT_PACKAGES += \
@@ -122,7 +138,7 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    lights.msm8992
+    lights.msm8994
 
 # Media
 PRODUCT_PACKAGES += \
@@ -188,7 +204,7 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    power.msm8992
+    power.msm8994
 
 # Radio
 PRODUCT_COPY_FILES += \
@@ -235,3 +251,8 @@ PRODUCT_PACKAGES += \
     libwpa_client \
     wpa_supplicant \
     wpa_supplicant.conf
+
+ifneq ($(TARGET_BUILD_VARIANT),user,userdebug,eng)
+  ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=0
+  ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
+endif

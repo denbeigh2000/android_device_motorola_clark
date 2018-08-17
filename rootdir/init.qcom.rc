@@ -66,11 +66,11 @@ on boot
     # update foreground cpuset now that processors are up
     # foreground gets all CPUs except CPU 3
     # CPU 3 is reserved for the top app
-    write /dev/cpuset/foreground/cpus 0-2,4-5
-    write /dev/cpuset/foreground/boost/cpus 4-5
+    write /dev/cpuset/foreground/cpus 0-7
+    write /dev/cpuset/foreground/boost/cpus 4-7
     write /dev/cpuset/background/cpus 0-1
     write /dev/cpuset/system-background/cpus 0-2
-    write /dev/cpuset/top-app/cpus 0-5
+    write /dev/cpuset/top-app/cpus 0-7
 
     # motosh irq_disable parameter permissions
     chown root mot_tcmd /sys/module/motosh/parameters/irq_disable
@@ -353,8 +353,7 @@ service qmuxd /system/bin/qmuxd
 
 service netmgrd /system/bin/netmgrd
     class main
-    user root
-    group root wifi wakelock radio inet
+    group radio system wakelock
     writepid /dev/cpuset/system-background/tasks
 
 service ipacm-diag /system/bin/ipacm-diag

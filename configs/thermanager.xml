@@ -1,11 +1,8 @@
 <thermanager>
 	<resources>
-		<!-- thermal zones msm8992 -->
+		<!-- thermal zones -->
 		<resource name="bms"  type="tz">/sys/class/thermal/thermal_zone0</resource>
 		<resource name="battery"  type="tz">/sys/class/thermal/thermal_zone1</resource>
-
-		<resource name="chg_therm"  type="tz">/sys/class/thermal/thermal_zone2</resource>
-		<resource name="pchg_therm"  type="tz">/sys/class/thermal/thermal_zone3</resource>
 
 		<resource name="tsens_tz_sensor0"  type="tz">/sys/class/thermal/thermal_zone4</resource>
 		<resource name="tsens_tz_sensor1"  type="tz">/sys/class/thermal/thermal_zone5</resource>
@@ -14,30 +11,35 @@
 		<resource name="tsens_tz_sensor4"  type="tz">/sys/class/thermal/thermal_zone8</resource>
 		<resource name="tsens_tz_sensor5"  type="tz">/sys/class/thermal/thermal_zone9</resource>
 
-		<resource name="tsens_tz_sensor7"  type="tz">/sys/class/thermal/thermal_zone10</resource>
-		<resource name="tsens_tz_sensor9"  type="tz">/sys/class/thermal/thermal_zone11</resource>
-		<resource name="tsens_tz_sensor10" type="tz">/sys/class/thermal/thermal_zone12</resource>
-
-		<resource name="tsens_tz_sensor11" type="tz">/sys/class/thermal/thermal_zone13</resource>
-		<resource name="tsens_tz_sensor12" type="tz">/sys/class/thermal/thermal_zone14</resource>
-
-		<resource name="tsens_tz_sensor13" type="tz">/sys/class/thermal/thermal_zone15</resource>
-		<resource name="tsens_tz_sensor14" type="tz">/sys/class/thermal/thermal_zone16</resource>
-
-		<resource name="pm8994_tz" type="tz">/sys/class/thermal/thermal_zone17</resource>
-		<resource name="msm_therm" type="tz">/sys/class/thermal/thermal_zone18</resource>
-
-		<resource name="emmc_therm" type="tz">/sys/class/thermal/thermal_zone19</resource>
-		<resource name="pa_therm0" type="tz">/sys/class/thermal/thermal_zone20</resource>
-		<resource name="pa_therm1" type="tz">/sys/class/thermal/thermal_zone21</resource>
-		<resource name="quiet_therm" type="tz">/sys/class/thermal/thermal_zone22</resource>
-
-		<resource name="THRM_57-0" type="tz">/sys/class/thermal/thermal_zone23</resource> <!-- THRM_57-0 -->
-		<resource name="THRM_57-1" type="tz">/sys/class/thermal/thermal_zone24</resource> <!-- THRM_57-1 -->
-		<resource name="THRM_53-0" type="tz">/sys/class/thermal/thermal_zone25</resource> <!-- THRM_53-0 -->
-		<resource name="THRM_53-1" type="tz">/sys/class/thermal/thermal_zone26</resource> <!-- THRM_53-1 -->
-		<resource name="THRM_53-2" type="tz">/sys/class/thermal/thermal_zone27</resource> <!-- THRM_53-2 -->
-		<resource name="THRM_53-3" type="tz">/sys/class/thermal/thermal_zone28</resource> <!-- THRM_53-3 -->
+		<resource name="tsens_tz_sensor6"  type="tz">/sys/class/thermal/thermal_zone10</resource>  <!-- cpu7 -->
+		<resource name="tsens_tz_sensor7"  type="tz">/sys/class/thermal/thermal_zone11</resource> <!-- cpu0 -->
+		<resource name="tsens_tz_sensor8"  type="tz">/sys/class/thermal/thermal_zone12</resource> <!-- cpu1 -->
+		<resource name="tsens_tz_sensor9"  type="tz">/sys/class/thermal/thermal_zone13</resource> <!-- cpu2 -->
+		<resource name="tsens_tz_sensor10" type="tz">/sys/class/thermal/thermal_zone14</resource> <!-- cpu3 -->
+		<resource name="tsens_tz_sensor11" type="tz">/sys/class/thermal/thermal_zone15</resource> <!-- gpu0 -->
+		<resource name="tsens_tz_sensor12" type="tz">/sys/class/thermal/thermal_zone16</resource> <!-- gpu1 -->
+		<resource name="tsens_tz_sensor13" type="tz">/sys/class/thermal/thermal_zone17</resource> <!-- cpu4 -->
+		<resource name="tsens_tz_sensor14" type="tz">/sys/class/thermal/thermal_zone18</resource> <!-- cpu5 -->
+		<resource name="tsens_tz_sensor15" type="tz">/sys/class/thermal/thermal_zone19</resource> <!-- cpu6 -->
+		
+		<resource name="wchg_therm" type="tz">/sys/class/thermal/thermal_zone2</resource>
+		<resource name="pm8994_tz" type="tz">/sys/class/thermal/thermal_zone20</resource>
+		<resource name="pm_therm" type="tz">/sys/class/thermal/thermal_zone21</resource>
+		
+		<resource name="emmc_therm" type="tz">/sys/class/thermal/thermal_zone22</resource>
+		<resource name="pa_therm0" type="tz">/sys/class/thermal/thermal_zone23</resource>
+		<resource name="pa_therm1" type="tz">/sys/class/thermal/thermal_zone24</resource>
+		<resource name="chg_therm" type="tz">/sys/class/thermal/thermal_zone25</resource>
+		<resource name="LLM_IA57" type="tz">/sys/class/thermal/thermal_zone26</resource>
+		
+		<resource name="THRM_57-0" type="tz">/sys/class/thermal/thermal_zone27</resource>
+		<resource name="THRM_57-1" type="tz">/sys/class/thermal/thermal_zone28</resource>
+		<resource name="THRM_57-2" type="tz">/sys/class/thermal/thermal_zone29</resource>
+		<resource name="THRM_57-3" type="tz">/sys/class/thermal/thermal_zone30</resource>
+		<resource name="THRM_53-0" type="tz">/sys/class/thermal/thermal_zone31</resource>
+		<resource name="THRM_53-1" type="tz">/sys/class/thermal/thermal_zone32</resource>
+		<resource name="THRM_53-2" type="tz">/sys/class/thermal/thermal_zone33</resource>
+		<resource name="THRM_53-3" type="tz">/sys/class/thermal/thermal_zone34</resource>
 
 		<resource name="temp-core" type="union">
 			<resource name="msm_therm" />
@@ -47,14 +49,17 @@
 		</resource>
 
 		<resource name="temp-cluster-a53" type="union">
-			<resource name="tsens_tz_sensor7"  /> <!-- cpu0-1 -->
-			<resource name="tsens_tz_sensor9"  /> <!-- cpu2 -->
-			<resource name="tsens_tz_sensor10"  /> <!-- cpu3 -->
+			<resource name="tsens_tz_sensor7"  />
+			<resource name="tsens_tz_sensor8"  />
+			<resource name="tsens_tz_sensor9"  />
+			<resource name="tsens_tz_sensor10" />
 		</resource>
 
 		<resource name="temp-cluster-a57" type="union">
-			<resource name="tsens_tz_sensor13"  /> <!-- cpu4 -->
-			<resource name="tsens_tz_sensor14" /> <!-- cpu5 -->
+			<resource name="tsens_tz_sensor13" />
+			<resource name="tsens_tz_sensor14" />
+			<resource name="tsens_tz_sensor15" />
+			<resource name="tsens_tz_sensor6"  />
 		</resource>
 
 		<resource name="temp-adreno-430" type="union">
@@ -69,6 +74,8 @@
 		<resource name="cpu3" type="sysfs">/sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq</resource>
 		<resource name="cpu4" type="sysfs">/sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq</resource>
 		<resource name="cpu5" type="sysfs">/sys/devices/system/cpu/cpu5/cpufreq/scaling_max_freq</resource>
+		<resource name="cpu6" type="sysfs">/sys/devices/system/cpu/cpu5/cpufreq/scaling_max_freq</resource>
+		<resource name="cpu7" type="sysfs">/sys/devices/system/cpu/cpu5/cpufreq/scaling_max_freq</resource>
 
 		<resource name="cluster-a53" type="union">
 			<resource name="cpu0" />
@@ -80,6 +87,8 @@
 		<resource name="cluster-a57" type="union">
 			<resource name="cpu4" />
 			<resource name="cpu5" />
+			<resource name="cpu6" />
+			<resource name="cpu7" />
 		</resource>
 
 		<!-- device-specific -->
@@ -169,33 +178,36 @@
 	</control>
 
 	<control name="cpu-a53">
-		<mitigation level="off"><value resource="cluster-a53">1440000</value></mitigation>
-		<mitigation level="1"><value resource="cluster-a53">1248000</value></mitigation>
-		<mitigation level="2"><value resource="cluster-a53">960000</value></mitigation>
-		<mitigation level="3"><value resource="cluster-a53">864000</value></mitigation>
-		<mitigation level="4"><value resource="cluster-a53">787200</value></mitigation>
-		<mitigation level="5"><value resource="cluster-a53">672000</value></mitigation>
-		<mitigation level="6"><value resource="cluster-a53">600000</value></mitigation>
-		<mitigation level="7"><value resource="cluster-a53">460800</value></mitigation>
-		<mitigation level="8"><value resource="cluster-a53">384000</value></mitigation>
-		<mitigation level="9"><value resource="shutdown" /></mitigation>
+		<mitigation level="off"><value resource="cluster-a53">4294967295</value></mitigation>
+		<mitigation level="1"><value resource="cluster-a53">1478400</value></mitigation>
+		<mitigation level="2"><value resource="cluster-a53">1344000</value></mitigation>
+		<mitigation level="3"><value resource="cluster-a53">1248000</value></mitigation>
+		<mitigation level="4"><value resource="cluster-a53">960000</value></mitigation>
+		<mitigation level="5"><value resource="cluster-a53">864000</value></mitigation>
+		<mitigation level="6"><value resource="cluster-a53">768000</value></mitigation>
+		<mitigation level="7"><value resource="cluster-a53">672000</value></mitigation>
+		<mitigation level="8"><value resource="cluster-a53">600000</value></mitigation>
+		<mitigation level="9"><value resource="cluster-a53">460800</value></mitigation>
+		<mitigation level="10"><value resource="cluster-a53">384000</value></mitigation>
+		<mitigation level="11"><value resource="shutdown" /></mitigation>
 	</control>
 
 	<control name="cpu-a57">
-		<mitigation level="off"><value resource="cluster-a57">1824000</value></mitigation>
-		<mitigation level="1"><value resource="cluster-a57">1689600</value></mitigation>
-		<mitigation level="2"><value resource="cluster-a57">1632000</value></mitigation>
-		<mitigation level="3"><value resource="cluster-a57">1536000</value></mitigation>
-		<mitigation level="4"><value resource="cluster-a57">1440000</value></mitigation>
-		<mitigation level="5"><value resource="cluster-a57">1344000</value></mitigation>
-		<mitigation level="6"><value resource="cluster-a57">1248000</value></mitigation>
-		<mitigation level="7"><value resource="cluster-a57">960000</value></mitigation>
-		<mitigation level="8"><value resource="cluster-a57">864000</value></mitigation>
-		<mitigation level="9"><value resource="cluster-a57">768000</value></mitigation>
-		<mitigation level="10"><value resource="cluster-a57">633600</value></mitigation>
-		<mitigation level="11"><value resource="cluster-a57">480000</value></mitigation>
-		<mitigation level="12"><value resource="cluster-a57">384000</value></mitigation>
-		<mitigation level="13"><value resource="shutdown" /></mitigation>
+		<mitigation level="off"><value resource="cluster-a57">4294967295</value></mitigation>
+		<mitigation level="1"><value resource="cluster-a57">1824000</value></mitigation>
+		<mitigation level="2"><value resource="cluster-a57">1728000</value></mitigation>
+		<mitigation level="3"><value resource="cluster-a57">1632000</value></mitigation>
+		<mitigation level="4"><value resource="cluster-a57">1536000</value></mitigation>
+		<mitigation level="5"><value resource="cluster-a57">1440000</value></mitigation>
+		<mitigation level="6"><value resource="cluster-a57">1344000</value></mitigation>
+		<mitigation level="7"><value resource="cluster-a57">1248000</value></mitigation>
+		<mitigation level="8"><value resource="cluster-a57">960000</value></mitigation>
+		<mitigation level="9"><value resource="cluster-a57">864000</value></mitigation>
+		<mitigation level="10"><value resource="cluster-a57">768000</value></mitigation>
+		<mitigation level="11"><value resource="cluster-a57">633600</value></mitigation>
+		<mitigation level="12"><value resource="cluster-a57">480000</value></mitigation>
+		<mitigation level="13"><value resource="cluster-a57">384000</value></mitigation>
+		<mitigation level="14"><value resource="shutdown" /></mitigation>
 	</control>
 
 	<!-- burn-out protection -->

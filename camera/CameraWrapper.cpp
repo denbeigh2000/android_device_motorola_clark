@@ -95,7 +95,7 @@ static int camera_device_open(const hw_module_t *module, const char *name,
         return -EINVAL;
     }
 
-    while (cameraretry < 3) {
+    while (cameraretry < 5) {
          rv = gVendorModule->common.methods->open(
                  (const hw_module_t*)gVendorModule, name,
                  device);
